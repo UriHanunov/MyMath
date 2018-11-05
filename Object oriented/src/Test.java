@@ -9,7 +9,7 @@ public class Test
 {
 	public static void main(String[] args)
 	{
-		System.out.println("check if the commit is working");
+		
 		// check for monom
 		Monom m1 = new Monom(4,1);
 		Monom m2 = new Monom(3,4);
