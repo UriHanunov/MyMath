@@ -170,6 +170,45 @@ class TestPolynom {
 		}
 	}
 	
+	@Test
+	public void testDerivativePolynom() throws Exception
+	{
+		Polynom p1 = new Polynom("5");
+		Polynom p2 = new Polynom();
+		p2 = (Polynom)(p1.derivative());
+		Polynom p3 = new Polynom ("0");
+		
+		if(!p2.equals(p3))
+		{
+			fail("ERR: the function derivative or equals is wrong");
+		}
+		
+	    p1 = new Polynom("7x^3-5x^3+12");
+		p2 = new Polynom();
+		p2 = (Polynom)(p1.derivative());
+		p3 = new Polynom ("21x^2-15x^2");
+		
+		if(!p2.equals(p3))
+		{
+			fail("ERR: the function derivative or equals is wrong");
+		}
+
+	}
+	
+	@Test
+	public void testRootPolynom() throws Exception
+	{
+		Polynom p1 = new Polynom ("x");
+		double result = p1.root(-2, 10, 0.01);
+		
+		if(result!=0)
+		{
+			fail("ERR: the function root is wrong");
+		}
+
+	}
+	
+	
 	
 	
 
