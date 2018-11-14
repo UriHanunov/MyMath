@@ -84,5 +84,7 @@ public class Test
 		System.out.println("the result need to be clost to -2, the result that the function return="+root);
 		
 		
+		
+		
 	}
 }

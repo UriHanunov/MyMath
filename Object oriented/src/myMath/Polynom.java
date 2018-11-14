@@ -374,8 +374,16 @@ public class Polynom implements Polynom_able
 		
 		Monom_Comperator smpByPower = new Monom_Comperator(); //sort the arry
 		this.monoms.sort(smpByPower);
-		Iterator<Monom> it = this.monoms.iterator();
 		String print = "";
+		for(int i=0 ; i<this.monoms.size() ; i++)
+		{
+			if(this.monoms.get(i).get_coefficient()==0)
+			{
+				this.monoms.remove(i);
+				i--;
+			}
+		}
+		Iterator<Monom> it = this.monoms.iterator();
 		boolean checkFirst = true; //if the first monom is positive so don't print '+' before it
 		while(it.hasNext())
 		{
