@@ -375,7 +375,7 @@ public class Polynom implements Polynom_able
 		Monom_Comperator smpByPower = new Monom_Comperator(); //sort the arry
 		this.monoms.sort(smpByPower);
 		String print = "";
-		for(int i=0 ; i<this.monoms.size() ; i++)
+		for(int i=0 ; i<this.monoms.size() ; i++) //delete the zero monoms from the polynom
 		{
 			if(this.monoms.get(i).get_coefficient()==0)
 			{
