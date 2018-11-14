@@ -68,7 +68,7 @@ public class TestMonom {
 		double result = m1.f(3);
 		if(result!=27)
 		{
-			fail("ERR: the function 'f' is wrong");
+			fail("ERR: the function f is wrong");
 		}
 	}
 
