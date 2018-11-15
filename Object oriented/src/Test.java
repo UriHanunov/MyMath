@@ -78,7 +78,7 @@ public class Test
 		Polynom p13 = new Polynom("0x+0");
 		System.out.println("the result need to be true, the function return:"+p13.isZero());
 		
-		//check the function substract
+		//check the function root
 		Polynom p14 = new Polynom("x^2-4");
 		double root = p14.root(-3, 1, 0.1);
 		System.out.println("the result need to be clost to -2, the result that the function return="+root);

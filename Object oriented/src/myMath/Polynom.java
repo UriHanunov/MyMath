@@ -276,7 +276,7 @@ public class Polynom implements Polynom_able
 	/**
 	 * Compute a value x' (x0<=x'<=x1) for with |f(x')| < eps
 	 * assuming (f(x0)*f(x1)<=0, returns f(x2) such that:
-	 * 	(i) x0<=x2<=x2 && (ii) f(x2)<eps
+	 * 	(i) x0<=x'<=x2 && (ii) |f(x')|<eps
 	 * @param x0 starting point
 	 * @param x1 end point
 	 * @param eps step (positive) value
@@ -294,7 +294,7 @@ public class Polynom implements Polynom_able
 			mid = (x0+x1)/2; //calculate the middle
 			double a = this.f(mid); //the y value in this point
 			a=Math.abs(a);
-			if(a<=eps && a>=0) //if the mid close to eps
+			if(a<=eps) //if the mid close to eps
 			{
 				return mid;
 			}

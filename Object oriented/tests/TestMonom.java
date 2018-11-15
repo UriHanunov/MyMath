@@ -8,8 +8,24 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import myMath.Monom;
+import myMath.Polynom;
 
 public class TestMonom {
+	
+	@Test
+	public void testConstructorMonom() throws Exception
+	{
+		try
+		{
+			Monom m1 = new Monom(3,-5); //we try to create monom with a negative power
+		}
+		catch(Exception e) //if we got Exception so the constructor is good
+		{
+			return;
+		}
+		//if we didn't got Exception so the test fail
+		fail("ERR: the constructor is wrong because it accept negative power");
+	}
 	
 	@Test
 	public void testAddMonom() throws Exception
