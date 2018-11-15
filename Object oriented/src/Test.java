@@ -83,11 +83,6 @@ public class Test
 		double root = p14.root(-3, 1, 0.1);
 		System.out.println("the result need to be clost to -2, the result that the function return="+root);
 		
-		Polynom p16 = new Polynom ("0.2x^4-1.5x^3+3x^2-x-5");
-		double result = p16.areaUnder(-2, 6, 0.01);
-		System.out.println(result);
-		
-		
 		
 		
 	}

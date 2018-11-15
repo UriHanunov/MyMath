@@ -15,7 +15,7 @@ public class Polynom implements Polynom_able
 	private ArrayList<Monom> monoms;
 	
 	/**
-	 * this function is a constructor that gets string tnd make it a polynom
+	 * this function is a constructor that gets string and make it a polynom
 	 * @param a the string that the constructor get
 	 */
 	public Polynom(String a)
