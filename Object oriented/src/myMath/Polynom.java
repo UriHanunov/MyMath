@@ -348,9 +348,28 @@ public class Polynom implements Polynom_able
 		double numOfRec = (x1-x0)/eps; //number of rectangles
 		for(int i=0 ; i<numOfRec ; i++)
 		{
-			if(this.f(x0)>0) //if the value of y is bigger than 0 so adeed the area to the sum of area
+			if(this.f(x0)>0) //if the value of y is bigger than 0 so added the area to the sum of area
 			{
 				answer=answer+(f(x0)*eps);
+			}
+			x0=x0+eps; //the next rectangle
+		}
+		return answer; //return the sum of the rectangles
+	}
+	
+	/**
+	 * Compute Riemann's Integral under this Polynom starting from x0, till x1 using eps size steps
+	 * @return the approximated area under the x-axis above this Polynom and between the [x0,x1] range.
+	 */
+	public double areaUnder(double x0, double x1, double eps)
+	{
+		double answer=0.0; //save the area every time
+		double numOfRec = (x1-x0)/eps; //number of rectangles
+		for(int i=0 ; i<numOfRec ; i++)
+		{
+			if(this.f(x0)<0) //if the value of y is smaller than 0 so added the area to the sum of area
+			{
+				answer=answer+((f(x0)*eps))*(-1);
 			}
 			x0=x0+eps; //the next rectangle
 		}

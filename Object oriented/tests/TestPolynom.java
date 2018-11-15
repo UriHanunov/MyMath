@@ -301,6 +301,24 @@ class TestPolynom {
 	}
 	
 	@Test
+	public void testAreaUnderPolynom() throws Exception
+	{
+		Polynom p1 = new Polynom ("x");
+		double result = p1.areaUnder(-10,0,0.01);
+		if(!(result<=50.1 && result>=49.9))
+		{
+			fail("ERR: the function areaUnder is wrong");
+		}
+		
+		p1 = new Polynom ("x^2+3x-5");
+		result = p1.areaUnder(-6, -2, 0.01);
+		if(!(result<=9.4 && result>=9.3))
+		{
+			fail("ERR: the function areaUnder is wrong");
+		}
+	}
+	
+	@Test
 	public void testIteretorPolynom() throws Exception
 	{
 		Polynom p1 = new Polynom ("x^6+4x^5-3x^3+x^2-4+6");
