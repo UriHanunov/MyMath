@@ -1,5 +1,6 @@
 import myMath.Monom;
 import myMath.Polynom;
+
 /**
  * this calss is a test to the classes monom and polynom
  * @author Uri Hanunov and Olga Mazo
@@ -9,7 +10,6 @@ public class Test
 {
 	public static void main(String[] args)
 	{
-		
 		// check for monom
 		Monom m1 = new Monom(4,1);
 		Monom m2 = new Monom(3,4);
@@ -32,8 +32,8 @@ public class Test
 		
 		
 		//check the function area
-		Polynom p2 = new Polynom("x");
-		double checkArea = p2.area(0,10,0.01);
+		Polynom p2 = new Polynom("x^2-8");
+		double checkArea = p2.area(-6,6,0.01);
 		System.out.println("the result need to be clost to 50, the result that the function return=" + checkArea);
 		
 		
